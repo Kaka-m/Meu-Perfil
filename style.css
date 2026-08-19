@@ -1,0 +1,149 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --background-color: #f4f1ea;
+    --surface-color: #ffffff;
+    --text-color: #24313a;
+    --accent-color: #176b87;
+    --secondary-accent: #e8a04e;
+    --font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 32px 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.modo-escuro {
+    --background-color: #05090d;
+    --surface-color: #111a21;
+    --text-color: #e5f2ee;
+    --accent-color: #8cf5d3;
+    --secondary-accent: #f0a66a;
+}
+
+header, main, footer {
+    width: min(100%, 720px);
+    margin-inline: auto;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section, footer {
+    width: 100%;
+    margin: 28px 0;
+    padding: 24px;
+    background-color: var(--surface-color);
+    border: 1px solid rgba(103, 232, 194, 0.25);
+    border-radius: 12px;
+}
+
+.profile-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto;
+    border: 3px solid var(--accent-color);
+}
+
+button {
+    display: block;
+    margin: 12px auto;
+    padding: 10px 18px;
+    color: #101820;
+    background-color: var(--secondary-accent);
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    font: inherit;
+    font-weight: bold;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+p {
+    text-align: center;
+}
+
+h1, h2 {
+    text-align: center;
+    color: var(--accent-color);
+}
+
+ul {
+    display: grid;
+    gap: 10px;
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 0;
+    line-height: 1.8;
+    list-style: none;
+}
+
+li {
+    padding: 8px 14px;
+    color: #101820;
+    background-color: var(--accent-color);
+    border-radius: 6px;
+}
+
+li:nth-child(even) {
+    background-color: var(--secondary-accent);
+}
+
+a {
+    display: inline-block;
+    padding: 10px 18px;
+    color: #101820;
+    background-color: var(--accent-color);
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+a:hover {
+    background-color: var(--secondary-accent);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    section, footer {
+        margin: 18px 0;
+        padding: 18px;
+    }
+
+    .profile-photo {
+        width: 140px;
+        height: 140px;
+    }
+}
+#relogio-digital {
+font-size: 3em;
+font-weight: bold;
+color: #1c1fde;
+background-color: #ffb300;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);}
